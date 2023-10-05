@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Repaso_poo/EjPersona/EjPersona.iml" filepath="$PROJECT_DIR$/Repaso_poo/EjPersona/EjPersona.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Repaso_poo/Ejercicio/Ejercitacion.iml" filepath="$PROJECT_DIR$/Repaso_poo/Ejercicio/Ejercitacion.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Intellij_Java.iml" filepath="$PROJECT_DIR$/.idea/Intellij_Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/POO/POO.iml" filepath="$PROJECT_DIR$/POO/POO.iml" />
       <module fileurl="file://$PROJECT_DIR$/Practica/Practica.iml" filepath="$PROJECT_DIR$/Practica/Practica.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Repaso_poo/Repaso_poo.iml" filepath="$PROJECT_DIR$/Repaso_poo/Repaso_poo.iml" />
       <module fileurl="file://$PROJECT_DIR$/primer_prog/primer_prog.iml" filepath="$PROJECT_DIR$/primer_prog/primer_prog.iml" />
     </modules>
   </component>

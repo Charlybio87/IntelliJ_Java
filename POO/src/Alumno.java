@@ -40,11 +40,10 @@ public class Alumno {
     // Metodo String. Codigo que muestra los datos
     @Override
     public String toString() {
-        return "Alumno{" +
+        return "Alumno: " +
                 "nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
-                ", materia='" + materia + '\'' +
-                '}';
+                ", materia='" + materia + '\'';
     }
 
 }

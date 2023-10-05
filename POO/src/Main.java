@@ -1,8 +1,10 @@
 /** ---Comentario de Documentacion---
- * @Programa: "POO (programación orientada a objetos)"
+ * @Programa: "POO (Programa orientada a objetos)"
  * @author: Ribas Carlos
  * @version 1.0.0
+ * @Fecha: 28/09/2023
  * @see:
+ * @nota: práctica de POO
  */
 
 /* ---Comentario de bloque---
@@ -15,6 +17,7 @@ public class Main {
         // Definir un objeto de la clase alumno
         Alumno miPrimerAlumno;
         miPrimerAlumno = new Alumno("Pilar","Ruiz","Medicina General");
+
         // Crear un objeto en particular con datos de un alumno
         Persona miprimerObjetoPersona;
         miprimerObjetoPersona = new Persona("Carlos","Ribas");
