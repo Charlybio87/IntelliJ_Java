@@ -3,10 +3,13 @@ public class Aula {
     String nombre;
     String direccion;
 
+//Método constructor
     public Aula(String nombre, String direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
     }
+    
+//Método getter and set
     public String getNombre() {
         return nombre;
     }
