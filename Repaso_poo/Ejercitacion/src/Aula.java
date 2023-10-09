@@ -1,15 +1,23 @@
 public class Aula {
-    //Defino Atributos
+    // DEFINO ATRIBUTOS/PROPIEDADES
     String nombre;
     String direccion;
 
+<<<<<<< Updated upstream
 //Método constructor
+=======
+    // METODO CONSTRUCTOR ()
+>>>>>>> Stashed changes
     public Aula(String nombre, String direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
     }
+<<<<<<< Updated upstream
     
 //Método getter and set
+=======
+    // METODO SET AND GET (modifica y leer propiedades)
+>>>>>>> Stashed changes
     public String getNombre() {
         return nombre;
     }
@@ -26,6 +34,7 @@ public class Aula {
         this.direccion = direccion;
     }
 
+<<<<<<< Updated upstream
     @Override
     public String toString() {
         return "Aula{" +
@@ -33,4 +42,10 @@ public class Aula {
                 ", direccion='" + direccion + '\'' +
                 '}';
     }
+=======
+    //METODO STRING (visualizamos los datos)
+    @Override
+    public String toString() {
+        return "Imprimir datos de miAula "+"nombre: '" + nombre + '\'' +", direccion:'" + direccion + '\'';}
+>>>>>>> Stashed changes
 }

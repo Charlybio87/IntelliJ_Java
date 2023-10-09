@@ -25,9 +25,13 @@ public class Main {
         //Se crear una clase
         Aula miAula1;
         //Se crea un objeto
+        /* se crea una objeto vacio y un objeto con datos */
         Aula miAula2 = new Aula ("","");
         miAula1 = new Aula("java","pepe 145");
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
         // 2 alternativas de traer y mostrar datos
         System.out.println("El nombre del aula1: "+ miAula1.getNombre());
