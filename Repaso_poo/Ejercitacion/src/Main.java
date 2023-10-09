@@ -23,15 +23,15 @@
 public class Main {
     public static void main(String[] args) {
         //Se crear una clase
-        Aula miAula;
+        Aula miAula1;
         //Se crea un objeto
         Aula miAula2 = new Aula ("","");
-        miAula = new Aula("java","pepe 145");
+        miAula1 = new Aula("java","pepe 145");
 
 
         // 2 alternativas de traer y mostrar datos
-        System.out.println("El nombre del aula1: "+ miAula.getNombre());
-        String direccion = miAula.getDireccion();
+        System.out.println("El nombre del aula1: "+ miAula1.getNombre());
+        String direccion = miAula1.getDireccion();
         System.out.println("La direccion del aula1 es: "+ direccion);
 
         System.out.println("******************************************");
@@ -42,7 +42,11 @@ public class Main {
         System.out.println("La direccion del aula2 es: "+ miAula2.getDireccion());
 
         System.out.println("******************************************");
-        miAula.setNombre("JavaScript"); //Sobreescribe el nombre
-        System.out.println("Set nombre del aula1: "+ miAula.getNombre());
+        miAula1.setNombre("JavaScript"); //Sobreescribe el nombre
+        System.out.println("Set nombre del aula1: "+ miAula1.getNombre());
+
+        System.out.println("******************************************");
+        System.out.println(miAula1);
+        System.out.println(miAula2);
     }
 }

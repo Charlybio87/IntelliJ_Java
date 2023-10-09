@@ -26,4 +26,11 @@ public class Aula {
         this.direccion = direccion;
     }
 
+    @Override
+    public String toString() {
+        return "Aula{" +
+                "nombre='" + nombre + '\'' +
+                ", direccion='" + direccion + '\'' +
+                '}';
+    }
 }
