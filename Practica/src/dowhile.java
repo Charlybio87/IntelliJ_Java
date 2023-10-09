@@ -25,7 +25,7 @@ public class dowhile {
 
             }
 
-            System.out.println("Ingrese dos numeros ");
+            //System.out.println("Ingrese dos numeros ");
         }while (bandera);
     }
 }
