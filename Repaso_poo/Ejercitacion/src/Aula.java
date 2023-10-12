@@ -25,16 +25,9 @@ public class Aula {
         this.direccion = direccion;
     }
 
-    @Override
-    public String toString() {
-        return "Aula{" +
-                "nombre='" + nombre + '\'' +
-                ", direccion='" + direccion + '\'' +
-                '}';
-    }
-    //METODO STRING (visualizamos los datos)
+   //METODO STRING (visualizamos los datos)
     @Override
     public String toString() {
         return "Imprimir datos de miAula "+"nombre: '" + nombre + '\'' +", direccion:'" + direccion + '\'';}
->>>>>>> Stashed changes
+
 }

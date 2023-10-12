@@ -1,7 +1,7 @@
 /** ---Comentario de Documentacion---
  * @Programa: "Ejercicio POO propuesto"
  * @author: Ribas Carlos
- * @version 1.0.1
+ * @version: 1.0.1
  * @Fecha: 05/10/2023
  * @see:
  * @nota:
