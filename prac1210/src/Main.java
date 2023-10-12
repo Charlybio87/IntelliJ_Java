@@ -2,30 +2,44 @@ import javax.swing.*;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-/*TERMINAR DE ARMAR EL MENU DE PROFESOR */
+/**---Comentario de Documentacion---
+ * @Programa: "PRACTICA codo a codo"
+ * @author: Ribas Carlos
+ * @version 1.0.3
+ * @see:
+ */
 
-/*
-*   1.	Crear un proyecto
-    2.	Crear una clase Profesor
-    3.	Crear 3 profesores
-    4.	Modificar el nombre de los tres profesores
-    5.	Listar o mostrar a los profesores
-    6.  Crear un menú de opciones :
-        -	Crear los tres profesores
-        -	Modificar el nombre de los tres profesores
-        -	listar a los tres profesores
-* */
+/* ---Comentario de bloque---
+ * Para mostrar la calificación de un alumno, es necesario evaluar
+ * las condiciones que se indican en la siguiente tabla.
+ *
+ * Para saber los atajos de intellij Ctrl+j
+ *
+ * PRACTICA:
+ *   1.	Crear un proyecto
+ *   2.	Crear una clase Profesor
+ *   3.	Crear 3 profesores
+ *   4.	Modificar el nombre de los tres profesores
+ *   5.	Listar o mostrar a los profesores
+ *   6.  Crear un menú de opciones :
+ *       -	Crear los tres profesores
+ *       -	Modificar el nombre de los tres profesores
+ *       -	listar a los tres profesores
+ */
+
 public class Main {
     public static void main(String[] args) {
+                                                                    // DECLARACION VARIABLES Y ASIGNACION
         int i, opcion = 0;
+        String band;
         boolean bandera = true;
         Scanner teclado = new Scanner(System.in);
-
-        // Se crean clase con objetos vacios
+                                                                    // SE CREA CLASE CON OBJETIVOS VACIOS
         Profesor profesor1 = null;
         Profesor profesor2 = null;
         Profesor profesor3 = null;
-
+                                                                    // INICIALIZAR TECLADO Y LLENADO DATO
+                                                                    // USO DE IF & SWITCH PARA CARGAR 3 PROFESORES
         for (i = 1; i < 3; i++) {
             System.out.println("Ingrese los datos del profesor:");
             System.out.print("Nombre: ");
@@ -34,7 +48,7 @@ public class Main {
             String apellido = teclado.next();
             System.out.print("DNI: ");
             int dni = teclado.nextInt();
-
+                                                                    // CARGAR CADA PROFESOR SELECCIONADO POR i
             switch (i) {
                 case 1:
                     profesor1 = new Profesor(nombre, apellido, dni);
@@ -46,7 +60,8 @@ public class Main {
                     System.out.println("Opcion invalida");
             }
         }
-
+                                                                    // USO DE REPETIR-MIENTRAS & SWITCH PARA
+                                                                    // CREAR UN MENU PARA CARGAR/MODIFICAR/VER
         do {
             System.out.println("Ingrese una opcion: ");
             System.out.println("1.new profesor:");
@@ -68,9 +83,9 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Indique el Profesor: ");
-                    System.out.println("1." + profesor1);
-                    System.out.println("2." + profesor2);
-                    System.out.println("3." + profesor3);
+                    System.out.println("1." + profesor1.getNombre());
+                    System.out.println("2." + profesor2.getNombre());
+                    System.out.println("3." + profesor3.getNombre());
                     System.out.print(">> ");
                     int opcion2 = teclado.nextInt();
                     switch (opcion2) {
@@ -112,11 +127,14 @@ public class Main {
                     }
                     break;
                 case 3:
-                    System.out.println("Profesor: ");
-                    System.out.println("1. profesor 1");
-                    System.out.println("2. profesor 2");
-                    System.out.println("3. profesor 3");
-                    System.out.print(">> ");
+                    System.out.println("Indique el Profesor: ");
+                    System.out.println("1." + profesor1.getNombre());
+                    System.out.println("2." + profesor2.getNombre());
+                    if (profesor3 != null) {
+                        System.out.println("3." + profesor3.getNombre());
+                    } else {
+                        System.out.print(">> ");
+                        }
                     int opcion3 = teclado.nextInt();
                     switch (opcion3) {
                         case 1:
@@ -132,10 +150,12 @@ public class Main {
                             System.out.println("DNI: " + profesor2.getDni());
                             break;
                         case 3:
+
                             System.out.println("Profesor 3:");
                             System.out.println("Nombre: " + profesor3.getNombre());
                             System.out.println("Apellido: " + profesor3.getApellido());
                             System.out.println("DNI: " + profesor3.getDni());
+
                             break;
                         default:
                             System.out.println("datos invalidos");
@@ -144,31 +164,13 @@ public class Main {
                 default:
                     System.out.println("Opcion invalida");
             }
-            System.out.println("Desea realizar algo más!? true/false ");
-            bandera = teclado.nextBoolean();
-        }while (bandera);
-
+            System.out.println("Desea realizar algo más!? S/N ");
+            band = teclado.next();
+     // } while (bandera);
+        } while ((band=="s")||(band=="S"));
 
         System.out.println(profesor1);
         System.out.println(profesor2);
         System.out.println(profesor3);
     }
-
-
-//        for (i = 1; i < 3; i++) {
-//            System.out.println("Ingrese los datos del profesor, nombre apellido y dni");
-//            nombre = sc.next();
-//            switch (i) {
-//                case 1:
-//                    System.out.println(profesor1);break;
-//                case 2:
-//                    System.out.println(profesor2);break;
-//                case 3:
-//                    System.out.println(profesor3);break;
-//                default:
-//                    System.out.println("Opcion invalida");
-//            }
-//
-//
-//        }
 }
