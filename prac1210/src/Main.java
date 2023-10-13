@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**---Comentario de Documentacion---
  * @Programa: "PRACTICA codo a codo"
  * @author: Ribas Carlos
- * @version 1.0.3
+ * @version: 1.0.3
  * @see:
  */
 
@@ -27,8 +27,8 @@ import java.util.Scanner;
  *       -	listar a los tres profesores
  */
 
-public class Main {
-    public static void main(String[] args) {
+public class Main {                                                 // GENERARO UNA CLASE PUBLICA
+    public static void main(String[] args) {                        // DECLARACION DEL METODO main
                                                                     // DECLARACION VARIABLES Y ASIGNACION
         int i, opcion = 0;
         String band;
