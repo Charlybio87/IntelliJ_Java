@@ -38,6 +38,11 @@ public class Main {                                                 // GENERARO 
         Profesor profesor1 = null;
         Profesor profesor2 = null;
         Profesor profesor3 = null;
+
+        Alumno alumno1 = new Alumno(10,"Lionel","Messi",' ');
+        Alumno alumno2 = new Alumno(21,"Manu","Ginobili",' ');
+        Alumno alumno3 = new Alumno(1,"Jaun Manuel","Fangio",' ');
+
                                                                     // INICIALIZAR TECLADO Y LLENADO DATO
                                                                     // USO DE IF & SWITCH PARA CARGAR 3 PROFESORES
         for (i = 1; i < 3; i++) {

@@ -45,6 +45,6 @@ public class Profesor {
                 "nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", dni=" + dni +
-        "------------------------";
+                "------------------------";
     }
 }
