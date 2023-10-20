@@ -11,7 +11,7 @@ public class Main {
                 , salir0 = false, salir1 = false;
 
 
-        /*CREACION DE CLASES*/
+        /*CREACION DE CLASES CON Y SIN OBJETOS*/
         Profesor profesorTitular = new Profesor('1', "Favaloro", "Rene", "Titular");
         Profesor profesorTp = new Profesor('2', "Argento", "Pepe", "Practica");;
         Profesor profesorGabinete = new Profesor('3',"Curie","Martha","Gabinete");
@@ -21,8 +21,11 @@ public class Main {
         Alumno alumno2 = new Alumno(21, "Manu", "Ginobili",
                 ' ', ' ', ' ');
         Alumno alumno3 = null;
-        /*Loge*/
+
+        // Se armo un bucle do-while para mantener el programa run
         do {
+            /*Loge*/
+            // Se establece tres profesores
             System.out.println("""
                     ****** SISTEMA ******
                     1. Profesos Titular
@@ -35,14 +38,17 @@ public class Main {
             switch (opcion) {
                 case 1:
                     System.out.println("Hola, Profesor " + profesorTitular.apellido + " " + profesorTitular.nombre);
+                    System.out.println(" ");
                     band0 = true;
                     break;
                 case 2:
                     System.out.println("Hola, Profesor " + profesorTp.apellido + " " + profesorTp.nombre);
+                    System.out.println(" ");
                     band1 = true;
                     break;
                 case 3:
                     System.out.println("Hola, Profesor " + profesorGabinete.apellido + " " + profesorGabinete.nombre);
+                    System.out.println(" ");
                     band2 = true;
                     break;
                 case 4:
@@ -90,6 +96,7 @@ public class Main {
                 case 5:
                     salir0 = true;
                     band0 = false; band1 = false; band2 = false;
+                    //inicializo bandera para continuar evita que ingrese al menu de alumnos
                     break;
                 default:
                     System.out.println("Opcion incorrecta.");
@@ -118,7 +125,7 @@ public class Main {
                             System.out.println(alumno3);
                             break;
                         case 2:
-                            if (band0 == true) {
+                            if (band0 == true) {//solo la bandera del profesor titular puede realizar edit/modificar
                                 System.out.println("AGREGAR/MODIFICAR ALUMNOS:");
                                 System.out.println("1. " + alumno1);
                                 System.out.println("2. " + alumno2);
@@ -167,8 +174,8 @@ public class Main {
                             }
                             break;
                         case 3:
-                            System.out.println("AGREGAR NOTA:");
-                            if (band0 == true) {
+                            System.out.println("AGREGAR NOTA:");// cada profesor tiene una bandera
+                            if (band0 == true) {                // solo puede colocar una nota
                                 band1 = false;
                                 band2 = false;
                                 System.out.println("Ingrese la nota del Examen final: ");
@@ -210,7 +217,7 @@ public class Main {
                                 alumno3.setNotagabinete(notagabinete3);
                             }
                             break;
-                        case 4:
+                        case 4:// se llama al funcion de la clase alumno para calcular nota final
                             System.out.println("NOTAS FINALES:");
                             System.out.println(alumno1.getApellido() + " Nota final: ");
                             alumno1.notaFinal();
@@ -226,7 +233,7 @@ public class Main {
                             System.out.println("Se a ingresado una opcion incorrecta.");
                     }
                 } while(salir1 != true);
-            }
+            }//inicializo las banderas para permitir acceso de los demas profesores
             band0 = false; band1 = false; band2 = false; salir1=false;
         } while(salir0 != true);
     }
