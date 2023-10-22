@@ -41,10 +41,5 @@ public class App {
 
         System.out.println("El equipo que fue eliminado es: "+grupoMundial.remove(5));
 
-
-
-
-
-
     }
 }

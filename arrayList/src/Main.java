@@ -7,11 +7,11 @@ public class Main {
         nombrePais = miPais.getNombre(); //muestra el nombre
         System.out.println(miPais);
 
-        Operacion misOperaciones= new Operacion(2,5);
+        Operaciones misOperaciones= new Operaciones(2,5);
 
         int resultado;
         resultado = sumar (2,5);
-        resultado = misOperaciones.sumar2(20,40);
+        misOperaciones.sumar2(20,40);
 
         String saludo = saludar();
         restar(20,30);
