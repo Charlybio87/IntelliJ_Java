@@ -7,7 +7,7 @@ public class Main {
             Scanner teclado = new Scanner(System.in);
 
         /*INICIALIZACION DE VARIABLES Y DECLARACIONES*/
-
+            boolean band =true;
         /*CREACION DE CLASES CON Y SIN OBJETOS*/
         Profesor profesorTitular = new Profesor('1', "Favaloro", "Rene", "Titular");
         Profesor profesorTp = new Profesor('2', "Argento", "Pepe", "Practica");
@@ -20,7 +20,7 @@ public class Main {
                 ' ', ' ', ' ');
         Alumno alumno3 = null;
 
-      //  do {
+      do {
             System.out.println("""
                     ****** SISTEMA ******
                     1. Profesos Titular
@@ -39,12 +39,26 @@ public class Main {
                     profesorTitular.saludo2();
                     break;
                 case 2:
+                    System.out.println("Profesor Trabajos Practicos: ");
+                    profesorTp.saludo2();
+                    break;
+                case 3:
                     System.out.println("Profesor Gabinete: ");
                     profesorGabinete.saludo2();
                     break;
+                case 4:
+                    System.out.println(profesorTitular);
+                    System.out.println(profesorTp);
+                    System.out.println(profesorGabinete);
+                    break;
+                case 5:
+                    band = false;
+                    break;
+
             }
 
-       // } while ();
+     } while (band == true);
     }
+
 
 }
