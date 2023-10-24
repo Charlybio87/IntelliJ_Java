@@ -24,7 +24,7 @@ public class arrayListAlumnos {
                     1. Ingresar Alumnos
                     2. Modificar
                     3. Eliminar
-                    4. Motrar
+                    4. Mostrar
                     5. Salir
                     """);
             int opcion = teclado.nextInt();
