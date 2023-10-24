@@ -35,6 +35,8 @@ public class MiArrayList {
         mercaderias.remove(0);
         System.out.println(mercaderias);
 
+        System.out.println(mercaderias.toString());
+
 
     }
 }
