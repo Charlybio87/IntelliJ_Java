@@ -28,6 +28,7 @@ public class arrayListAlumnos {
                     4. Mostrar
                     5. Ingresar Notas
                     6. Salir
+                    5. Salir
                     """);
 
              /* Se selecciona una opcion por teclado, y se emplea una condicion
