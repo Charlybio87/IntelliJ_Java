@@ -28,7 +28,6 @@ public class arrayListAlumnos {
                     4. Mostrar
                     5. Ingresar Notas
                     6. Salir
-                    5. Salir
                     """);
 
              /* Se selecciona una opcion por teclado, y se emplea una condicion
@@ -105,7 +104,7 @@ public class arrayListAlumnos {
                         System.out.println("Elemento encontrado: " + elementoBuscado.getNombre());
                         System.out.print("Ingrese nota: ");
                         elementoBuscado.setNota(teclado.nextInt());
-                        //se llama a un metodo calificacion dentro de la clase Aulo.
+                        //se llama al metodo calificacion dentro de la clase Aulo.
                         elementoBuscado.calificacion();
                     } else {
                         System.out.println("Elemento no encontrado");
@@ -115,7 +114,7 @@ public class arrayListAlumnos {
                     band = true;
                     break;
                 default:
-                    System.out.println("El valor no corresponde: " + opcion);
+                    System.out.println("El valor" + opcion  + "no corresponde." );
             }
         }while(band !=true);
     }

@@ -1,12 +1,12 @@
-package Desafio1;
+package Datos;
 
-public class Aula {
+public class Profesores {
     private String nombre;
     private String apellido;
     private int dni;
     private int nota;
 
-    public Aula(String nombre, String apellido, int dni,int nota) {
+    public Profesores(String nombre, String apellido, int dni,int nota) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -57,7 +57,7 @@ public class Aula {
         } else if ((nota>=4)&&(nota<=6)) {
             System.out.println("Suficiente");
         }else
-        System.out.println("Nos vemos pronto!!");
+            System.out.println("Nos vemos pronto!!");
     }
 
 }
