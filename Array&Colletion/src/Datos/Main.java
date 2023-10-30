@@ -1,25 +1,18 @@
 package Datos;
 
-import com.sun.source.tree.ReturnTree;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         ArrayList<Alumnos> alumnos = new ArrayList<>();
-        ArrayList<Profesores> profesores = new ArrayList<>();
         alumnos = datosalumnos();
         for(Alumnos lista : alumnos){
             System.out.println(lista);//muestra la lista
         }
+
     }
 
-    public static ArrayList<Profesores> datosprofesor(){
-        ArrayList<Profesores> misProfesores = new ArrayList<Profesores>();
-
-        return misProfesores;
-    }
     public static ArrayList<Alumnos> datosalumnos(){
 
         Scanner teclado=new Scanner(System.in);
@@ -47,7 +40,7 @@ public class Main {
             misAlumnos.add(new Alumnos(nombre,apellido,dni));
 
             System.out.println("Desea seguir ingresando alumons?? " +
-                    "true/flase");
+                    "true/false");
             seguir = teclado.nextBoolean();
         }
         return misAlumnos;
