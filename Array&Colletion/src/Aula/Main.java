@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+    static ArrayList<Alumnos> misAlumnos = new ArrayList<>();
+
     public static void main(String[] args) {
-        ArrayList<Alumnos> alumnos = new ArrayList<>();
-        var salir=false;
+       //ArrayList<Alumnos> misAlumnos = new ArrayList<>();
+        boolean salir=false;
         while (!salir) {
             menuprincipal();
-            salir = datosalumnos();
+            salir = datosAlumnos();
         }
     }
 
@@ -25,13 +27,13 @@ public class Main {
                     """);
     }
 
-    public static boolean datosalumnos(){ // como voy a devolver una bandera
+    public static boolean datosAlumnos(){ // como voy a devolver una bandera
                                           // coloco boolean
 
-        ArrayList<Alumnos> misAlumnos = new ArrayList<Alumnos>();
+        //ArrayList<Alumnos> misAlumnos = new ArrayList<Alumnos>();
         Scanner teclado=new Scanner(System.in);
         int opcion = teclado.nextInt();
-        var salir=false;
+        boolean salir=false;
 
         switch (opcion) {
             case 1:
@@ -41,11 +43,10 @@ public class Main {
                     // por c/bucle for se ingresa un objeto
                     // (alumno) a la clase Aula.
                     System.out.print("""                            
-                            =====*Ingrese*=====
-                                                             
-                            Nombre:
-                            Apellido:
-                            DNI:
+                            Ingresar
+                            - Nombre
+                            - Apellido
+                            - DNI
                             """ + i + ". ");
                     String nombre = teclado.next();
                     String apellido = teclado.next();
@@ -77,7 +78,11 @@ public class Main {
                 elim = elim - 1;
                 misAlumnos.remove(elim);
                 //elimina una objeto de la posicion seleccionada
-
+            case 4:
+                System.out.println("Mostrar Lista:");
+                for (Alumnos alumnos:misAlumnos){
+                    System.out.println(alumnos.toString());
+                }
                 break;
             case 6:
                 salir = true;
