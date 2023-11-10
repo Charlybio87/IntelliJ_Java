@@ -13,10 +13,11 @@ public class MascotaUI {
         Mascota miMascota = new Mascota(nombre,raza,edad);
     }
     public void modificar(){
-        
+
 
     }
     public void listar(){
+        System.out.println("Mostrar Lista:");
 
     }
     public void salir(){
