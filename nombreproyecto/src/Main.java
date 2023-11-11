@@ -4,7 +4,8 @@ import service.ProfesorService;
 import java.util.Scanner;
 /*
 * Se crearon directorios (Paquetes).
-* */
+* CARPETA UI: actuaria como la interfaz usuario
+*/
 public class Main {
 
     static ProfesorService profesorService = new ProfesorService();

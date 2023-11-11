@@ -4,7 +4,7 @@ import models.Profesor;
 
 import java.util.List;
 /*
-* CAR4PETA DAO: se colocará todo lo referido (ej.alumno, profesor) a escritura, lectura
+* CAR4PETA DAO: se colocará lo referido (ej.alumno, profesor) a escritura, lectura
 * en un archivo o una base de datos.
 * Aquí se manejara lo que almacenara el profesor.
 */
