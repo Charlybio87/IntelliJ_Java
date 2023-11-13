@@ -4,13 +4,12 @@ public class Profesor {
     private String nombre;
     private String apellido;
     private int dni;
-    int cantidadClases;
+    //int cantidadClases;
 
-    public Profesor(String nombre, String apellido, int dni, int cantidadClases) {
+    public Profesor(String nombre, String apellido, int dni) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
-        this.cantidadClases = cantidadClases;
     }
 
     public String getNombre() {
@@ -37,21 +36,11 @@ public class Profesor {
         this.dni = dni;
     }
 
-    public int getCantidadClases() {
-        return cantidadClases;
-    }
-
-    public void setCantidadClases(int cantidadClases) {
-        this.cantidadClases = cantidadClases;
-    }
-
     @Override
     public String toString() {
-        return "Profesor{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", dni=" + dni +
-                ", cantidadClases=" + cantidadClases +
-                '}';
+        return "Profesor: " +
+                apellido + ' ' +
+                nombre + ' ' +
+                dni;
     }
 }
