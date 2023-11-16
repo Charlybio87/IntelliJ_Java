@@ -1,53 +1,11 @@
-import Models.Profesor;
 import Ui.ProfesorUi;
-
-import javax.swing.*;
-import java.util.ArrayList;
-
 public class Main{
 
 
     public static void main(String[] args) {
 
-        //ArrayList<Profesor> misProfesores = new ArrayList<>();
         ProfesorUi profesorUi = new ProfesorUi();
-        int menu;
-
-        while(true) {
-            menu = Integer.parseInt(JOptionPane.showInputDialog(null,
-                    "1. Agregar un profesor" + "\n" +
-                    "2. Modificar profesor" + "\n" +
-                    "3. Eliminar profesor" + "\n" +
-                    "4. Mostrar Lista de profesores" + "\n" +
-                    "5. Salir" + "\n","Menu de Profesores",JOptionPane.PLAIN_MESSAGE));
-            // Integer.parseInt: Convierte (parsea) un argumento de tipo cadena
-            // y devuelve un entero de la base especificada.
-            // JOptionPane.showMessageDialog(Componente padre, mensaje, título, tipo de mensaje, icono);
-            // JOptionPane: es una clase que nos permite mostrar un diálogo gráfico con el que
-            // podemos interactuar para introducir o mostrar la información que queramos.
-            // El método showInputDialog retorna la entrada del usuario (es decir, lo que escribe
-            // el usuario) o null si el usuario presionó el botón de cancelar.
-            switch (menu) {
-                case 1:
-                    profesorUi.cargar();
-                    break;
-                case 2 :
-                    profesorUi.modificar();
-                    break;
-                case 3 :
-                    profesorUi.eliminar();
-                    break;
-                case 4 :
-                   profesorUi.mostrar();
-                    break;
-                case 5 :
-                    System.exit(0);
-                    break;
-                default: JOptionPane.showMessageDialog( null,"Opcion invalida",
-                        "Error",JOptionPane.ERROR_MESSAGE,null);
-                    break;
-            }
-        }
+        profesorUi.menu();
    }
 }
 /* OTRO FORMA DE ARMAR MENU
