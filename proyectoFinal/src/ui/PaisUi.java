@@ -1,7 +1,5 @@
 package ui;
 
-
-
 import service.PaisService;
 
 import javax.swing.*;
@@ -15,7 +13,7 @@ public class PaisUi {
         while(true){
             opcion = Integer.parseInt(JOptionPane.showInputDialog(
                     "GESTION DE PAISES"+ "\n" +
-                    "1. Alta de Paises" + "\n"+
+                    "1. Cargar Paises" + "\n"+
                     "2. Modificar Paises"+ "\n" +
                     "3. Salir "+ "\n"
             ));
@@ -24,7 +22,7 @@ public class PaisUi {
                     getMenuDatosPais();
                     break;
                 case 2:
-                    //modificarMenuPais();
+                    modificarMenuPais();
                     break;
                 case 3:
                     System.exit(0);
@@ -54,6 +52,10 @@ public class PaisUi {
                     0));
             esvalido = paisService.validarCantidadHabitantesPais(cantidadHabitantes);
         }
+
+    }
+
+    public void modificarMenuPais(){
 
     }
 
