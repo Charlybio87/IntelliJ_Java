@@ -1,24 +1,23 @@
-package models;
-
 import java.util.Date;
 
-public class Usuario {
+class Usuario {
     private int id;
     private String nombre;
     private Date fechaAlta;
     private Date fechaModificacion;
+    private String password;
     private String fechaNacimiento;
-    private String contrasena;
 
-    public Usuario(int id, String nombre, Date fechaAlta, Date fechaModificacion,
-                   String fechaNacimiento, String contrasena) {
+    public Usuario(int id, String nombre, Date fechaAlta, Date fechaModificacion, String password, String fechaNacimiento) {
         this.id = id;
         this.nombre = nombre;
         this.fechaAlta = fechaAlta;
         this.fechaModificacion = fechaModificacion;
+        this.password = password;
         this.fechaNacimiento = fechaNacimiento;
-        this.contrasena = contrasena;
     }
+
+    // Getters y setters
 
     public int getId() {
         return id;
@@ -52,6 +51,14 @@ public class Usuario {
         this.fechaModificacion = fechaModificacion;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getFechaNacimiento() {
         return fechaNacimiento;
     }
@@ -60,23 +67,13 @@ public class Usuario {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public String getContrasena() {
-        return contrasena;
-    }
-
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
-    }
-
     @Override
     public String toString() {
-        return "Usuario{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", fechaAlta=" + fechaAlta +
-                ", fechaModificacion=" + fechaModificacion +
-                ", fechaNacimiento=" + fechaNacimiento +
-                ", contrasena='" + contrasena + '\'' +
-                '}';
+        return "ID: " + id +
+                ", Nombre: " + nombre +
+                ", Fecha de Alta: " + fechaAlta +
+                ", Fecha de Modificación: " + fechaModificacion +
+                ", Contraseña: " + password +
+                ", Fecha de Nacimiento: " + fechaNacimiento;
     }
 }

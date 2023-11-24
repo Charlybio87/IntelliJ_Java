@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/borrador.iml" filepath="$PROJECT_DIR$/borrador.iml" />
+      <module fileurl="file://$PROJECT_DIR$/archivoRegistroAlta.iml" filepath="$PROJECT_DIR$/archivoRegistroAlta.iml" />
     </modules>
   </component>
 </project>
