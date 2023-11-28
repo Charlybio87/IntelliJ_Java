@@ -1,8 +1,11 @@
+import ui.UsuarioUi;
+
 /** ---Comentario de Documentacion---
  * @Programa: "PROYECTO FINAL PARTE 1"
  * @author: GRUPO 2
- * @version 1.0.0
+ * @version 1.0.2
  * @Fecha: 19/11/2023
+ * @FechaEntrega: 30/11/2023
  * @see:
  * @nota:
  */
@@ -11,9 +14,6 @@
  * Creacion de objetos y clases
  *
  */
-import models.Usuario;
-import ui.UsuarioUi;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -25,3 +25,5 @@ public class Main {
 
     }
 }
+
+

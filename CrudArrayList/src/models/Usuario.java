@@ -10,8 +10,8 @@ public class Usuario {
     private String fechaNacimiento;
     private String contrasena;
 
-    public Usuario(int id, String nombre, Date fechaAlta, Date fechaModificacion,
-                   String fechaNacimiento, String contrasena) {
+    public Usuario(int id, String nombre, Date fechaAlta,
+                   Date fechaModificacion, String fechaNacimiento, String contrasena) {
         this.id = id;
         this.nombre = nombre;
         this.fechaAlta = fechaAlta;
@@ -70,13 +70,13 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", fechaAlta=" + fechaAlta +
-                ", fechaModificacion=" + fechaModificacion +
-                ", fechaNacimiento=" + fechaNacimiento +
-                ", contrasena='" + contrasena + '\'' +
-                '}';
+        return  "\n"
+                + id +
+                ", " + nombre +
+                ", " + fechaAlta +
+                ", " + fechaModificacion +
+                ", " + fechaNacimiento +
+                ", " + contrasena;
     }
 }
+
