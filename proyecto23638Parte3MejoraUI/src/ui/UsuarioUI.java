@@ -56,14 +56,15 @@ public class UsuarioUI {
     public void altaUsuario(){
         String nombre = JOptionPane.showInputDialog("Ingrese el nombre del usuario:");
         String apellido = JOptionPane.showInputDialog("Ingrese el apellido del usuario:");
-        String fechaNacimientoStr = comom
+        String fechaNacimientoStr = JOptionPane.showInputDialog("Ingrese la fecha de nacimiento del usuario " +
+                "(en formato dd/MM/yyyy):");
 
-        /*// agreagar validaciones!!!!
+        // agreagar validaciones!!!!
 
 
         //idUltimo = idUltimo +1;
         //int idUsuario = idUltimo;
-        //Integer.parseInt(JOptionPane.showInputDialog("ingrese el id del usuario"));*/
+        //Integer.parseInt(JOptionPane.showInputDialog("ingrese el id del usuario"));
 
         try {
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -74,8 +75,7 @@ public class UsuarioUI {
 
             JOptionPane.showMessageDialog(null, "El Usuario fue creado exitosamente.");
         } catch (ParseException ex) {
-            JOptionPane.showMessageDialog(null, "Error al procesar la fecha de nacimiento." +
-                    "Asegúrese de ingresar el formato correcto (dd/MM/yyyy).");
+            JOptionPane.showMessageDialog(null, "Error al procesar la fecha de nacimiento. Asegúrese de ingresar el formato correcto (dd/MM/yyyy).");
         }
     }
     /*public void modificarCurso(){

@@ -56,7 +56,6 @@ public class UsuarioUi {
             }
         }
     }
-
     public void cargarUsuario(int id){
 
         boolean validar = false;
@@ -92,7 +91,7 @@ public class UsuarioUi {
                 fechaMod,fechaNacimiento,contrasena);
         misUsuarios.add(usua);
 
-    }//Charly
+    }
 
     public void mostrarListaUsuario(){
         String lista = "Lista de Usuarios: ";
@@ -101,7 +100,7 @@ public class UsuarioUi {
             lista = lista + usuario.toString() + "\n";
         }
         JOptionPane.showMessageDialog(null,lista);
-    }//Lujan
+    }
 
     public void eliminarUsuario(){
 
@@ -111,7 +110,7 @@ public class UsuarioUi {
         JOptionPane.showConfirmDialog(null, "Esta seguro que desea eliminar?");
         misUsuarios.remove(usuarioElim);
 
-    }//Albert
+    }
 
     public void modificarUsuario(){
         Date fechaMod = new Date();
@@ -126,7 +125,7 @@ public class UsuarioUi {
         usuarioModificar.setFechaModificacion(fechaMod);
 
         JOptionPane.showMessageDialog(null,misUsuarios.get(posicion));
-    }//Sole
+    }
 
     public void buscarUsuario(){
         String usuariobuscado;
