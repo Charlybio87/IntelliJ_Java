@@ -10,11 +10,12 @@ import java.util.Date;
 import java.util.Objects;
 
 public class UsuarioService {
-
+// La clase UsuarioService proporciona metodos de validacion utilizados
+// para verificar la validez de campos relacionados con la clase Usuario
     private ArrayList<Usuario> misUsuarios = new ArrayList<Usuario>();
     public boolean validarNombre(String name){
         boolean ban = true;
-        if(Objects.equals(name, "new")){
+        if(Objects.equals(name, "Ingrese")){
             ban = false;
             JOptionPane.showMessageDialog(null,
                     "Ingrese un dato valido.",
@@ -25,10 +26,11 @@ public class UsuarioService {
     public Boolean validarFecNac(String nacFec){
         boolean ban = true;
         Date fechaNacimiento = null;
+        // validacion de conversion de la cadena fechadenacimiento por medio
+        // del SimpleDateFormat.
         try {
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
             fechaNacimiento = dateFormat.parse(nacFec);
-
             ban = true;
         } catch (ParseException ex) {
             JOptionPane.showMessageDialog(null,
@@ -40,9 +42,10 @@ public class UsuarioService {
     }
     public boolean validarPassword(String password){
         boolean ban = true;
-        if(Objects.equals(password, "new")){
+        if(Objects.equals(password,"Ingrese")){
             ban = false;
-            JOptionPane.showMessageDialog(null,"Ingrese un dato valido.");
+            JOptionPane.showMessageDialog(null,
+                    "Ingrese un dato valido.");
         }
         return ban;
     }

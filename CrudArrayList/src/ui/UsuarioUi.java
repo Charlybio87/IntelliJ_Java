@@ -9,16 +9,19 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class UsuarioUi {
+
+    //Crear una Instancia de la Clase UsuarioService, la asigna a la variable usuarioService
     UsuarioService usuarioService = new UsuarioService();
+    //Declaracion y creacion arrayList misUsuarios que contiene objetos de la clase Usuario
     private ArrayList<Usuario> misUsuarios = new ArrayList<Usuario>();
 
     public UsuarioUi(){
         int opcion;
         int i = 0;
-
+    //Bucle de menu interactivo para Gestión de Usuarios
         while(true) {
             opcion = Integer.parseInt(JOptionPane.showInputDialog(
-                    "Gestion Usuario: " + "\n" +
+                    "Gestión Usuario: " + "\n" +
                             "1. Carga Usuario" + "\n" +
                             "2. Modificar Usuario" + "\n" +
                             "3. Eliminar Usuario" + "\n" +
@@ -51,14 +54,16 @@ public class UsuarioUi {
                     cargaPrevia();
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null, "Opcion invalida",
+                    JOptionPane.showMessageDialog(null,
+                            "Opcion invalida",
                             "Error",JOptionPane.ERROR_MESSAGE,null);
             }
         }
-    }
+    }//Belen
 
+                                    /*"1. Carga Usuario"*/
     public void cargarUsuario(int id){
-
+        //inicializacion de cariables
         boolean validar = false;
         int iD = id;
         String nombre = null;
@@ -66,22 +71,25 @@ public class UsuarioUi {
         Date fechaMod = new Date();
         String fechaNacimiento = null;
         String contrasena =null ;
-
+    // Ciclos de Validacion
         while(!validar) {
-            nombre = JOptionPane.showInputDialog("Ingrese Usuario","new");
+            nombre = JOptionPane.showInputDialog("Ingrese Usuario",
+                    "Ingrese");
             validar = usuarioService.validarNombre(nombre);
         }
 
         validar = false;
         while(!validar) {
             fechaNacimiento = JOptionPane.showInputDialog(
-                "Ingrese la fecha de nacimiento (dd/MM/yyyy):");
+                "Ingrese la fecha de nacimiento (dd/MM/yyyy):",
+                    "Ingrese");
             validar = usuarioService.validarFecNac(fechaNacimiento);
         }
 
         validar = false;
         while(!validar) {
-            contrasena = JOptionPane.showInputDialog("Ingrese Contraseña");
+            contrasena = JOptionPane.showInputDialog("Ingrese Contraseña",
+                    "Ingrese");
             validar = usuarioService.validarPassword(contrasena);
         }
 
@@ -91,6 +99,7 @@ public class UsuarioUi {
         Usuario usua = new Usuario(iD+1000,nombre,fechaAlt,
                 fechaMod,fechaNacimiento,contrasena);
         misUsuarios.add(usua);
+
 
     }//Charly
 
@@ -117,7 +126,7 @@ public class UsuarioUi {
         Date fechaMod = new Date();
 
         int posicion = Integer.parseInt(JOptionPane.showInputDialog("Posición que desea modificar:"));
-        posicion = posicion - 1;
+        //posicion = posicion - 1;
         System.out.println(misUsuarios.get(posicion));
         Usuario usuarioModificar = misUsuarios.get(posicion);
         usuarioModificar.setNombre(JOptionPane.showInputDialog("Ingrese nuevo nombre: "));
@@ -126,6 +135,7 @@ public class UsuarioUi {
         usuarioModificar.setFechaModificacion(fechaMod);
 
         JOptionPane.showMessageDialog(null,misUsuarios.get(posicion));
+
     }//Sole
 
     public void buscarUsuario(){
@@ -155,10 +165,11 @@ public class UsuarioUi {
         Date fAlta = new Date();
         Date fModificado = new Date();
                 for (i=0; i<10; i++){
-            u = new Usuario(1000+i,"Usuario"+i,
+            u = new Usuario(990+i,"Usuario"+i,
                     fAlta,fModificado,fNacimiento,"password "+i);
             misUsuarios.add(u);
         }
+
     }
 
 }
