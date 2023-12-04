@@ -70,13 +70,14 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return  "\n"
-                + id +
-                ", " + nombre +
-                ", " + fechaAlta +
-                ", " + fechaModificacion +
-                ", " + fechaNacimiento +
-                ", " + contrasena;
+        return  "\n" +
+                "║"   + id +
+                "║" + nombre +
+                "│ " + fechaAlta +
+                "│ " + fechaModificacion +
+                "│ " + fechaNacimiento +
+                "│ " + contrasena +
+                "║";
     }
 }
 

@@ -12,14 +12,14 @@ import java.util.Objects;
 public class UsuarioService {
 // La clase UsuarioService proporciona metodos de validacion utilizados
 // para verificar la validez de campos relacionados con la clase Usuario
-    private ArrayList<Usuario> misUsuarios = new ArrayList<Usuario>();
+    private ArrayList<Usuario> misUsuarios = new ArrayList<>();
     public boolean validarNombre(String name){
         boolean ban = true;
         if(Objects.equals(name, "Ingrese")){
             ban = false;
             JOptionPane.showMessageDialog(null,
-                    "Ingrese un dato valido.",
-                    "Error",JOptionPane.ERROR_MESSAGE,null);
+                "Ingrese un dato valido.",
+                "Error",JOptionPane.ERROR_MESSAGE,null);
         }
         return ban;
     }
@@ -34,8 +34,8 @@ public class UsuarioService {
             ban = true;
         } catch (ParseException ex) {
             JOptionPane.showMessageDialog(null,
-                    "Formato incorrecto.",
-                    "Error",JOptionPane.ERROR_MESSAGE,null);
+                "Formato incorrecto.",
+                "Error",JOptionPane.ERROR_MESSAGE,null);
             ban = false;
         }
         return ban;
@@ -45,41 +45,9 @@ public class UsuarioService {
         if(Objects.equals(password,"Ingrese")){
             ban = false;
             JOptionPane.showMessageDialog(null,
-                    "Ingrese un dato valido.");
+                    "Ingrese un dato valido.",
+                    "Error",JOptionPane.ERROR_MESSAGE,null);
         }
         return ban;
-    }
-    /*public void validarBuscar(int contador, String usubuscado){
-        for (Usuario buscarUsuario : misUsuarios) {
-            if (buscarUsuario.getNombre().equalsIgnoreCase(usubuscado)) {
-                JOptionPane.showMessageDialog(null, buscarUsuario);
-                JOptionPane.showMessageDialog(null,
-                        "El Usuario fue encontrado exitosamente.");
-            } else {
-                contador= contador + 1;
-            }
-        }
-        if (contador == misUsuarios.size()){
-            JOptionPane.showMessageDialog(null,
-                    usubuscado+" no se encuentra en la lista.");
-        }
-    }*/
-    public void validarBuscar(int contador, String usubuscado){
-        /*boolean usuarioEncontrado = false;
-
-        for (Usuario buscarUsuario : misUsuarios) {
-            if (buscarUsuario.getNombre().equalsIgnoreCase(usubuscado)) {
-                JOptionPane.showMessageDialog(null, buscarUsuario);
-                JOptionPane.showMessageDialog(null, "El Usuario fue encontrado exitosamente.");
-                usuarioEncontrado = true;
-                break; // Salir del bucle cuando se encuentra el usuario
-            } else {
-                contador = contador + 1;
-            }
-        }
-
-        if (!usuarioEncontrado) {
-            JOptionPane.showMessageDialog(null, usubuscado + " no se encuentra en la lista.");
-        }*/
     }
 }
